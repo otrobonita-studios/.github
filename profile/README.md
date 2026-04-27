@@ -38,8 +38,8 @@ Each project in this portfolio explores how lightweight AI interfaces, workflow 
 
 ---
 
-### blueprint-validator 
-  Validate structures, assets, and deliverables against defined design rules.
+### Nlueprint Validator 
+  Uses AI to validate structures, assets, and deliverables against defined design rules. A Proof of Concept only.
 
 ---
 
