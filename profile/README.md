@@ -4,11 +4,9 @@ We build focused AI-powered applications that turn complex workflows into usable
 
 Each project in this portfolio explores how lightweight AI interfaces, workflow orchestration, and intelligent automation can create immediate practical value — from music production and skills development to design governance and industrial adaptation.
 
-Rather than building “AI for everything,” we build **small intelligent systems with clear operational purpose**.
-
 ---
 
-## Current Application Portfolio
+## Current Application hosted here
 
 ### Creative Intelligence
 - **songcraft-intelligence**  
@@ -17,20 +15,20 @@ Rather than building “AI for everything,” we build **small intelligent syste
 - **release-desk**  
   Multi-channel release preparation for press releases, media outreach, and social publishing.
 
-- **spotify-agents**  
+- **distribution-agents**  
   Automation tools for music distribution workflows and platform interaction.
 
 ---
 
 ### Learning & Capability Development
 - **skills-drills**  
-  Interactive quizzes, flashcards, and modular training tools for continuous learning. 
+  Interactive quizzes, flashcards, and modular tools for training customers and users.
 
 ---
 
 ### Business & Operational Intelligence
 - **value-log**  
-  Capture and surface operational value creation opportunities across workflows.
+  Capture and surface operational value creation opportunities across workflows. A new take on the dreadful Time Reporting activity.
 
 - **hidden-cost-estimator**  
   Identify inefficiencies and estimate invisible operational costs.
@@ -59,36 +57,13 @@ Rather than building “AI for everything,” we build **small intelligent syste
 
 ## Design Philosophy
 
-All applications are built around a shared philosophy:
-
-- **Small focused interfaces**
-- **High signal, low friction**
-- **AI where it adds leverage**
-- **Modular architecture**
-- **Human-guided automation**
-
-We believe the strongest AI systems are not giant monoliths — but **composable tools that amplify human decision-making**.
-
----
-
-## Why This Exists
-
-Modern organizations are surrounded by repetitive decisions, fragmented workflows, and underused operational knowledge.
-
-Our goal is to transform that friction into:
-
-- faster decisions
-- clearer workflows
-- practical automation
-- measurable value
-
-Every repository here is a working step toward that goal.
+A host application for Design Principles, UI Guidelines, CSS Variables and Tokens and other rules that other applications, agents and LLMs can connect to, and learn from.
 
 ---
 
 ## Learn More
 
-Explore the portfolio at:
+Explore the portfolio at, apps added day by day:
 
 **https://otrobonita.com/apps**
 
