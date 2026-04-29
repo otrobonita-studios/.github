@@ -6,7 +6,7 @@ Each project in this portfolio explores how lightweight AI interfaces, workflow 
 
 ---
 
-## Current Application hosted here
+## Current Application hosted here (all Private)
 
 ### Creative Intelligence
 - **songcraft-intelligence**  
