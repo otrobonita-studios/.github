@@ -6,9 +6,9 @@ Each project in this portfolio explores how lightweight AI interfaces, workflow 
 
 ---
 
-## Current Application hosted here (all Private)
+## Current Applications hosted here (all Private)
 
-### Creative Intelligence
+### The Production Unit
 - **songcraft-intelligence**  
   AI-assisted music prompt engineering, structure design, and creative production workflows.
 
@@ -30,8 +30,8 @@ Each project in this portfolio explores how lightweight AI interfaces, workflow 
 - **value-log**  
   Capture and surface operational value creation opportunities across workflows. A new take on the dreadful Time Reporting activity.
 
-- **hidden-cost-estimator**  
-  Identify inefficiencies and estimate invisible operational costs.
+- **mIssed-opportunities**  
+  Identify inefficiencies and hidden costs to estimate invisible operational costs.
 
 - **factory-survival-kit**  
   AI-assisted scenario planning for keeping production capacity alive through market shifts.
