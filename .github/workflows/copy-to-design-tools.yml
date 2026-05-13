@@ -1,0 +1,44 @@
+name: Copy Design Tools Portal to design-tools repo
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Target branch in design-tools repo'
+        required: false
+        default: 'main'
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout source (.github repo)
+        uses: actions/checkout@v4
+        with:
+          ref: claude/design-system-tools-portal-CV61S
+
+      - name: Checkout target (design-tools repo)
+        uses: actions/checkout@v4
+        with:
+          repository: otrobonita-studios/design-tools
+          token: ${{ secrets.PAT_TOKEN }}
+          path: design-tools-repo
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Copy portal files to root of design-tools
+        run: |
+          cp design-system-tools/index.html       design-tools-repo/index.html
+          cp design-system-tools/t-light-tokens.css design-tools-repo/t-light-tokens.css
+          cp design-system-tools/portal.css        design-tools-repo/portal.css
+          cp design-system-tools/app.js            design-tools-repo/app.js
+
+      - name: Commit and push
+        working-directory: design-tools-repo
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --cached --quiet && echo "Nothing to commit" && exit 0
+          git commit -m "Add T-Light Design System Tools portal"
+          git push origin ${{ github.event.inputs.branch }}
