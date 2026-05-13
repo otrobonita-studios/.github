@@ -1,0 +1,368 @@
+/* ===================================================================
+   T-Light Design System — CSS Custom Properties (Design Tokens)
+   Version 2.0
+   =================================================================== */
+
+:root {
+
+  /* ---------------------------------------------------------------
+     COLOR PALETTE
+  --------------------------------------------------------------- */
+
+  /* Brand Primary (Blue) */
+  --tl-color-primary-50:  #E3F0FF;
+  --tl-color-primary-100: #BAD6FF;
+  --tl-color-primary-200: #8DBFFF;
+  --tl-color-primary-300: #5EA8FF;
+  --tl-color-primary-400: #3A94FF;
+  --tl-color-primary-500: #1A80FF;
+  --tl-color-primary-600: #0066CC;
+  --tl-color-primary-700: #004D99;
+  --tl-color-primary-800: #003366;
+  --tl-color-primary-900: #001A33;
+
+  /* Brand Secondary (Purple) */
+  --tl-color-secondary-50:  #F5EEF8;
+  --tl-color-secondary-100: #E8D5F0;
+  --tl-color-secondary-200: #D1ABE0;
+  --tl-color-secondary-300: #B980D0;
+  --tl-color-secondary-400: #9B56C0;
+  --tl-color-secondary-500: #7D2DAD;
+  --tl-color-secondary-600: #6C3082;
+  --tl-color-secondary-700: #4A1E5A;
+  --tl-color-secondary-800: #2E1238;
+  --tl-color-secondary-900: #150818;
+
+  /* Success (Green) */
+  --tl-color-success-50:  #E6F4ED;
+  --tl-color-success-100: #C3E4D1;
+  --tl-color-success-200: #91CAA9;
+  --tl-color-success-300: #6CB895;
+  --tl-color-success-400: #3DA270;
+  --tl-color-success-500: #1A7A4A;
+  --tl-color-success-600: #156039;
+  --tl-color-success-700: #0D5433;
+  --tl-color-success-800: #084022;
+  --tl-color-success-900: #062E1C;
+
+  /* Warning (Amber) */
+  --tl-color-warning-50:  #FFF8E1;
+  --tl-color-warning-100: #FFEDB3;
+  --tl-color-warning-200: #FFE080;
+  --tl-color-warning-300: #FFD54F;
+  --tl-color-warning-400: #FFC107;
+  --tl-color-warning-500: #C17B00;
+  --tl-color-warning-600: #A06300;
+  --tl-color-warning-700: #8A5700;
+  --tl-color-warning-800: #6B4200;
+  --tl-color-warning-900: #4D3000;
+
+  /* Error (Red) */
+  --tl-color-error-50:  #FDECEA;
+  --tl-color-error-100: #F9C4C1;
+  --tl-color-error-200: #F49B96;
+  --tl-color-error-300: #EF7B74;
+  --tl-color-error-400: #E85652;
+  --tl-color-error-500: #C62828;
+  --tl-color-error-600: #A61F1F;
+  --tl-color-error-700: #8B1A1A;
+  --tl-color-error-800: #6B1212;
+  --tl-color-error-900: #4D0F0F;
+
+  /* Info (Teal) */
+  --tl-color-info-50:  #E3F2F8;
+  --tl-color-info-100: #BAE0EE;
+  --tl-color-info-200: #90CEE3;
+  --tl-color-info-300: #6BC0DE;
+  --tl-color-info-400: #3EA8CF;
+  --tl-color-info-500: #0070A8;
+  --tl-color-info-600: #005C8B;
+  --tl-color-info-700: #004E76;
+  --tl-color-info-800: #003A58;
+  --tl-color-info-900: #002C42;
+
+  /* Neutral Scale */
+  --tl-color-neutral-0:    #FFFFFF;
+  --tl-color-neutral-50:   #F8F9FA;
+  --tl-color-neutral-100:  #F1F3F5;
+  --tl-color-neutral-200:  #E9ECEF;
+  --tl-color-neutral-300:  #DEE2E6;
+  --tl-color-neutral-400:  #CED4DA;
+  --tl-color-neutral-500:  #ADB5BD;
+  --tl-color-neutral-600:  #6C757D;
+  --tl-color-neutral-700:  #495057;
+  --tl-color-neutral-800:  #343A40;
+  --tl-color-neutral-900:  #212529;
+  --tl-color-neutral-950:  #12151A;
+  --tl-color-neutral-1000: #000000;
+
+  /* ---------------------------------------------------------------
+     SEMANTIC COLOR ALIASES
+  --------------------------------------------------------------- */
+
+  --tl-color-primary:           var(--tl-color-primary-600);
+  --tl-color-primary-light:     var(--tl-color-primary-300);
+  --tl-color-primary-dark:      var(--tl-color-primary-800);
+  --tl-color-primary-subtle:    var(--tl-color-primary-50);
+
+  --tl-color-secondary:         var(--tl-color-secondary-600);
+  --tl-color-secondary-light:   var(--tl-color-secondary-300);
+  --tl-color-secondary-dark:    var(--tl-color-secondary-800);
+  --tl-color-secondary-subtle:  var(--tl-color-secondary-50);
+
+  --tl-color-success:           var(--tl-color-success-500);
+  --tl-color-success-subtle:    var(--tl-color-success-50);
+  --tl-color-warning:           var(--tl-color-warning-500);
+  --tl-color-warning-subtle:    var(--tl-color-warning-50);
+  --tl-color-error:             var(--tl-color-error-500);
+  --tl-color-error-subtle:      var(--tl-color-error-50);
+  --tl-color-info:              var(--tl-color-info-500);
+  --tl-color-info-subtle:       var(--tl-color-info-50);
+
+  /* ---------------------------------------------------------------
+     SURFACE TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-surface-page:        var(--tl-color-neutral-50);
+  --tl-surface-card:        var(--tl-color-neutral-0);
+  --tl-surface-card-hover:  var(--tl-color-neutral-100);
+  --tl-surface-overlay:     var(--tl-color-neutral-0);
+  --tl-surface-sidebar:     var(--tl-color-neutral-900);
+  --tl-surface-code:        #1A1F2B;
+  --tl-surface-tooltip:     var(--tl-color-neutral-900);
+
+  /* ---------------------------------------------------------------
+     TEXT TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-text-primary:    var(--tl-color-neutral-900);
+  --tl-text-secondary:  var(--tl-color-neutral-700);
+  --tl-text-muted:      var(--tl-color-neutral-500);
+  --tl-text-disabled:   var(--tl-color-neutral-400);
+  --tl-text-inverse:    var(--tl-color-neutral-0);
+  --tl-text-link:       var(--tl-color-primary);
+  --tl-text-link-hover: var(--tl-color-primary-700);
+  --tl-text-code:       #B39DDB;
+
+  /* ---------------------------------------------------------------
+     BORDER TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-border-color:        var(--tl-color-neutral-200);
+  --tl-border-color-muted:  var(--tl-color-neutral-100);
+  --tl-border-color-strong: var(--tl-color-neutral-400);
+  --tl-border-width:        1px;
+  --tl-border-width-md:     2px;
+  --tl-border-width-lg:     3px;
+
+  /* ---------------------------------------------------------------
+     BORDER RADIUS TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-radius-none: 0;
+  --tl-radius-sm:   4px;
+  --tl-radius-md:   8px;
+  --tl-radius-lg:   12px;
+  --tl-radius-xl:   16px;
+  --tl-radius-2xl:  24px;
+  --tl-radius-3xl:  32px;
+  --tl-radius-full: 9999px;
+
+  /* ---------------------------------------------------------------
+     SPACING TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-space-0:    0;
+  --tl-space-px:   1px;
+  --tl-space-0-5:  2px;
+  --tl-space-1:    4px;
+  --tl-space-1-5:  6px;
+  --tl-space-2:    8px;
+  --tl-space-2-5:  10px;
+  --tl-space-3:    12px;
+  --tl-space-3-5:  14px;
+  --tl-space-4:    16px;
+  --tl-space-5:    20px;
+  --tl-space-6:    24px;
+  --tl-space-7:    28px;
+  --tl-space-8:    32px;
+  --tl-space-9:    36px;
+  --tl-space-10:   40px;
+  --tl-space-11:   44px;
+  --tl-space-12:   48px;
+  --tl-space-14:   56px;
+  --tl-space-16:   64px;
+  --tl-space-20:   80px;
+  --tl-space-24:   96px;
+  --tl-space-28:   112px;
+  --tl-space-32:   128px;
+  --tl-space-36:   144px;
+  --tl-space-40:   160px;
+  --tl-space-48:   192px;
+  --tl-space-56:   224px;
+  --tl-space-64:   256px;
+
+  /* ---------------------------------------------------------------
+     TYPOGRAPHY TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --tl-font-mono:    'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+  --tl-font-display: 'Inter', sans-serif;
+
+  /* Font Sizes */
+  --tl-text-xs:   0.75rem;    /* 12px */
+  --tl-text-sm:   0.875rem;   /* 14px */
+  --tl-text-base: 1rem;       /* 16px */
+  --tl-text-lg:   1.125rem;   /* 18px */
+  --tl-text-xl:   1.25rem;    /* 20px */
+  --tl-text-2xl:  1.5rem;     /* 24px */
+  --tl-text-3xl:  1.875rem;   /* 30px */
+  --tl-text-4xl:  2.25rem;    /* 36px */
+  --tl-text-5xl:  3rem;       /* 48px */
+  --tl-text-6xl:  3.75rem;    /* 60px */
+
+  /* Font Weights */
+  --tl-font-thin:       100;
+  --tl-font-extralight: 200;
+  --tl-font-light:      300;
+  --tl-font-regular:    400;
+  --tl-font-medium:     500;
+  --tl-font-semibold:   600;
+  --tl-font-bold:       700;
+  --tl-font-extrabold:  800;
+  --tl-font-black:      900;
+
+  /* Line Heights */
+  --tl-leading-none:    1;
+  --tl-leading-tight:   1.25;
+  --tl-leading-snug:    1.375;
+  --tl-leading-normal:  1.5;
+  --tl-leading-relaxed: 1.625;
+  --tl-leading-loose:   2;
+
+  /* Letter Spacing */
+  --tl-tracking-tighter: -0.05em;
+  --tl-tracking-tight:   -0.025em;
+  --tl-tracking-normal:  0;
+  --tl-tracking-wide:    0.025em;
+  --tl-tracking-wider:   0.05em;
+  --tl-tracking-widest:  0.1em;
+
+  /* ---------------------------------------------------------------
+     SHADOW TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-shadow-none:  none;
+  --tl-shadow-xs:    0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --tl-shadow-sm:    0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --tl-shadow-md:    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --tl-shadow-lg:    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --tl-shadow-xl:    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --tl-shadow-2xl:   0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --tl-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --tl-shadow-focus: 0 0 0 3px rgba(0, 102, 204, 0.3);
+
+  /* ---------------------------------------------------------------
+     TRANSITION TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-ease-linear: linear;
+  --tl-ease-in:     cubic-bezier(0.4, 0, 1, 1);
+  --tl-ease-out:    cubic-bezier(0, 0, 0.2, 1);
+  --tl-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --tl-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --tl-duration-75:  75ms;
+  --tl-duration-100: 100ms;
+  --tl-duration-150: 150ms;
+  --tl-duration-200: 200ms;
+  --tl-duration-300: 300ms;
+  --tl-duration-500: 500ms;
+  --tl-duration-700: 700ms;
+  --tl-duration-1000: 1000ms;
+
+  --tl-transition-fast:   var(--tl-duration-150) var(--tl-ease-in-out);
+  --tl-transition-base:   var(--tl-duration-200) var(--tl-ease-in-out);
+  --tl-transition-slow:   var(--tl-duration-300) var(--tl-ease-in-out);
+
+  /* ---------------------------------------------------------------
+     Z-INDEX TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-z-base:     0;
+  --tl-z-raised:   10;
+  --tl-z-dropdown: 100;
+  --tl-z-sticky:   200;
+  --tl-z-overlay:  300;
+  --tl-z-modal:    400;
+  --tl-z-popover:  450;
+  --tl-z-toast:    500;
+  --tl-z-tooltip:  600;
+
+  /* ---------------------------------------------------------------
+     BREAKPOINT TOKENS (used in JavaScript)
+  --------------------------------------------------------------- */
+
+  --tl-breakpoint-sm:  640px;
+  --tl-breakpoint-md:  768px;
+  --tl-breakpoint-lg:  1024px;
+  --tl-breakpoint-xl:  1280px;
+  --tl-breakpoint-2xl: 1536px;
+
+  /* ---------------------------------------------------------------
+     COMPONENT TOKENS
+  --------------------------------------------------------------- */
+
+  /* Button */
+  --tl-btn-height-sm:   32px;
+  --tl-btn-height-md:   40px;
+  --tl-btn-height-lg:   48px;
+  --tl-btn-height-xl:   56px;
+  --tl-btn-radius:      var(--tl-radius-md);
+  --tl-btn-font-size:   var(--tl-text-sm);
+  --tl-btn-font-weight: var(--tl-font-medium);
+  --tl-btn-padding-x:   var(--tl-space-4);
+  --tl-btn-padding-x-sm: var(--tl-space-3);
+  --tl-btn-padding-x-lg: var(--tl-space-6);
+
+  /* Input */
+  --tl-input-height-sm:   32px;
+  --tl-input-height-md:   40px;
+  --tl-input-height-lg:   48px;
+  --tl-input-radius:      var(--tl-radius-md);
+  --tl-input-border:      var(--tl-border-color);
+  --tl-input-bg:          var(--tl-surface-card);
+  --tl-input-focus-ring:  var(--tl-shadow-focus);
+  --tl-input-padding-x:   var(--tl-space-3);
+
+  /* Card */
+  --tl-card-radius:   var(--tl-radius-lg);
+  --tl-card-padding:  var(--tl-space-6);
+  --tl-card-shadow:   var(--tl-shadow-sm);
+  --tl-card-border:   var(--tl-border-color);
+
+  /* Badge */
+  --tl-badge-radius:  var(--tl-radius-full);
+  --tl-badge-height:  22px;
+
+  /* Modal */
+  --tl-modal-radius:  var(--tl-radius-xl);
+  --tl-modal-padding: var(--tl-space-8);
+
+  /* Navigation */
+  --tl-nav-item-height: 36px;
+  --tl-nav-item-radius: var(--tl-radius-md);
+
+  /* ---------------------------------------------------------------
+     ICON SIZE TOKENS
+  --------------------------------------------------------------- */
+
+  --tl-icon-xs:  12px;
+  --tl-icon-sm:  16px;
+  --tl-icon-md:  20px;
+  --tl-icon-lg:  24px;
+  --tl-icon-xl:  32px;
+  --tl-icon-2xl: 48px;
+
+}

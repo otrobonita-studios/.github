@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Light Design System Tools</title>
+  <meta name="description" content="Centralized portal for T-Light design system — CSS variables, linting, accessibility, and branding governance tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="t-light-tokens.css">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+<div class="portal" id="portal">
+
+  <!-- ============================================================
+       SIDEBAR
+  ============================================================ -->
+  <aside class="portal__sidebar" id="sidebar" role="navigation" aria-label="Portal navigation">
+
+    <div class="sidebar__header">
+      <div class="sidebar__logo">
+        <div class="logo__mark" aria-hidden="true">T</div>
+        <div class="logo__text">
+          <span class="logo__name">T-Light</span>
+          <span class="logo__tagline">Design System Tools</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav">
+
+      <div class="nav__group">
+        <span class="nav__group-label">Design Tokens</span>
+
+        <a class="nav__item active" data-section="colors" href="#colors" role="button">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"/></svg>
+          <span class="nav__label">Färgpalett</span>
+        </a>
+
+        <a class="nav__item" data-section="typography" href="#typography" role="button">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"/></svg>
+          <span class="nav__label">Typografi</span>
+        </a>
+
+        <a class="nav__item" data-section="variables" href="#variables" role="button">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          <span class="nav__label">CSS-variabler</span>
+        </a>
+      </div>
+
+      <div class="nav__group">
+        <span class="nav__group-label">Kvalitetsverktyg</span>
+
+        <a class="nav__item" data-section="linter" href="#linter" role="button">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+          <span class="nav__label">T-Light Linter</span>
+          <span class="nav__badge">v2</span>
+        </a>
+
+        <a class="nav__item" data-section="accessibility" href="#accessibility" role="button">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="nav__label">Accessibility Shaker</span>
+        </a>
+
+        <a class="nav__item" data-section="principles" href="#principles" role="button">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+          <span class="nav__label">Designprinciper</span>
+        </a>
+      </div>
+
+      <div class="nav__group">
+        <span class="nav__group-label">Säkerhet &amp; Branding</span>
+
+        <a class="nav__item" data-section="scramble" href="#scramble" role="button">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+          <span class="nav__label">Scramble Tool</span>
+        </a>
+
+        <a class="nav__item" data-section="branding" href="#branding" role="button">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span class="nav__label">Branding Portal</span>
+        </a>
+      </div>
+
+    </nav>
+
+    <div class="sidebar__footer">
+      <p class="footer__version">T-Light <span>v2.0</span></p>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span style="font-size:10px;color:var(--tl-color-neutral-600)">© Otrobonita</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ============================================================
+       MAIN
+  ============================================================ -->
+  <main class="portal__main" id="main">
+
+    <!-- Header -->
+    <header class="portal__header">
+      <div class="header__breadcrumb" id="headerBreadcrumb">
+        <span>Design Tokens</span>
+        <span class="header__breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="header__breadcrumb-current" id="breadcrumbCurrent">Färgpalett</span>
+      </div>
+      <div class="header__actions">
+        <button class="btn btn--sm btn--secondary" id="btnExportTokens" title="Exportera tokens som JSON">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          Exportera tokens
+        </button>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="portal__content" id="portalContent">
+
+      <!-- ==========================================================
+           SECTION: COLORS
+      ========================================================== -->
+      <section id="colors" class="section active" aria-label="Färgpalett">
+
+        <div class="section__header">
+          <div class="section__header-text">
+            <h1 class="section__title">Färgpalett</h1>
+            <p class="section__description">Alla T-Light-färger och semantiska färgaliaser. Klicka på en färgruta för att kopiera variabelnamnet eller hex-värdet.</p>
+          </div>
+          <div class="section__actions">
+            <div class="color-filter-bar" id="colorFilterBar" role="group" aria-label="Filtrera färgkategorier"></div>
+          </div>
+        </div>
+
+        <div id="colorPaletteRoot"></div>
+
+      </section>
+
+      <!-- ==========================================================
+           SECTION: TYPOGRAPHY
+      ========================================================== -->
+      <section id="typography" class="section" aria-label="Typografi">
+
+        <div class="section__header">
+          <div class="section__header-text">
+            <h1 class="section__title">Typografi</h1>
+            <p class="section__description">Godkända typsnitt, skalor, vikter och radavstånd. Alla typografiska tokens och kodexempel.</p>
+          </div>
+        </div>
+
+        <h2 style="font-size:var(--tl-text-sm);font-weight:var(--tl-font-semibold);color:var(--tl-text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:var(--tl-space-4)">Typografisk skala</h2>
+        <div id="typeScaleRoot" class="type-scale-grid" style="margin-bottom:var(--tl-space-10)"></div>
+
+        <h2 style="font-size:var(--tl-text-sm);font-weight:var(--tl-font-semibold);color:var(--tl-text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:var(--tl-space-4)">Fontvikter</h2>
+        <div id="typeWeightRoot" class="type-weight-grid" style="margin-bottom:var(--tl-space-10)"></div>
+
+        <h2 style="font-size:var(--tl-text-sm);font-weight:var(--tl-font-semibold);color:var(--tl-text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:var(--tl-space-4)">Typsnittsfamiljer</h2>
+        <div id="typeFontRoot" class="type-font-samples"></div>
+
+      </section>
+
+      <!-- ==========================================================
+           SECTION: CSS VARIABLES
+      ========================================================== -->
+      <section id="variables" class="section" aria-label="CSS-variabler">
+
+        <div class="section__header">
+          <div class="section__header-text">
+            <h1 class="section__title">CSS-variabler</h1>
+            <p class="section__description">Komplett lista över alla T-Light design tokens som CSS custom properties. Sökbar och filtrerbar per kategori.</p>
+          </div>
+        </div>
+
+        <div class="variables-search-bar">
+          <input type="search" class="form-input" id="variablesSearch" placeholder="Sök variabel..." aria-label="Sök CSS-variabel">
+          <select class="form-select" id="variablesFilter" aria-label="Filtrera kategori" style="width:200px">
+            <option value="">Alla kategorier</option>
+            <option value="color">Färger</option>
+            <option value="surface">Ytor</option>
+            <option value="spacing">Avstånd</option>
+            <option value="typography">Typografi</option>
+            <option value="border">Ramar</option>
+            <option value="shadow">Skuggor</option>
+            <option value="transition">Övergångar</option>
+            <option value="z-index">Z-index</option>
+            <option value="component">Komponenter</option>
+          </select>
+        </div>
+
+        <p class="variables-count" id="variablesCount"></p>
+
+        <div class="variables-table-wrap">
+          <table class="variables-table" aria-label="CSS-variabellista">
+            <thead>
+              <tr>
+                <th style="width:32px"></th>
+                <th>Variabel</th>
+                <th>Värde</th>
+                <th>Kategori</th>
+              </tr>
+            </thead>
+            <tbody id="variablesTableBody"></tbody>
+          </table>
+        </div>
+
+      </section>
+
+      <!-- ==========================================================
+           SECTION: LINTER
+      ========================================================== -->
+      <section id="linter" class="section" aria-label="T-Light Linter">
+
+        <div class="section__header">
+          <div class="section__header-text">
+            <h1 class="section__title">T-Light Linter</h1>
+            <p class="section__description">Klistra in HTML- eller CSS-kod för att granska den mot T-Light-standarder. Stödjer Tailwind, Bootstrap, PrimeFaces och JSF.</p>
+          </div>
+        </div>
+
+        <div class="linter-config">
+          <div class="form-group">
+            <label class="form-label" for="linterFramework">Ramverk</label>
+            <select class="form-select" id="linterFramework" aria-label="Välj ramverk">
+              <option value="generic">Generisk / Valfritt</option>
+              <option value="tailwind">Tailwind CSS</option>
+              <option value="bootstrap">Bootstrap</option>
+              <option value="primefaces">PrimeFaces</option>
+              <option value="jsf">JSF (JavaServer Faces)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="linterCodeType">Kodtyp</label>
+            <select class="form-select" id="linterCodeType" aria-label="Välj kodtyp">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="mixed">Blandat</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="linter-input-wrap">
+          <textarea
+            class="linter-textarea"
+            id="linterInput"
+            placeholder="Klistra in din kod här...
+
+Exempel:
+<div style='color: #ff0000; padding: 16px;'>
+  <img src='logo.png'>
+  <button></button>
+  <h1>Rubrik</h1>
+  <h3>Hoppar över h2!</h3>
+</div>"
+            spellcheck="false"
+            aria-label="Kod att granska"
+          ></textarea>
+        </div>
+
+        <div class="linter-actions">
+          <button class="btn btn--primary" id="btnRunLinter">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+            Kör granskning
+          </button>
+          <button class="btn btn--secondary" id="btnLinterSample">
+            Ladda exempelkod
+          </button>
+          <button class="btn btn--ghost" id="btnLinterClear">
+            Rensa
+          </button>
+        </div>
+
+        <div class="linter-results" id="linterResults">
+          <div class="results-summary-bar" id="linterSummary"></div>
+          <div class="issue-list" id="issueList"></div>
+        </div>
+
+      </section>
+
+      <!-- ==========================================================
+           SECTION: ACCESSIBILITY
+      ========================================================== -->
+      <section id="accessibility" class="section" aria-label="Accessibility Shaker">
+
+        <div class="section__header">
+          <div class="section__header-text">
+            <h1 class="section__title">Accessibility Shaker</h1>
+            <p class="section__description">Granska din kod mot WCAG-riktlinjer. Välj nivå, klistra in HTML och få en detaljerad rapport.</p>
+          </div>
+        </div>
+
+        <div class="a11y-level-selector" role="group" aria-label="Välj WCAG-nivå">
+          <button class="wcag-level-btn" data-level="A">
+            <span class="wcag-level-btn__badge">A</span>
+            <span class="wcag-level-btn__sub">Grundläggande</span>
+          </button>
+          <button class="wcag-level-btn active" data-level="AA">
+            <span class="wcag-level-btn__badge">AA</span>
+            <span class="wcag-level-btn__sub">Standard (rekommenderad)</span>
+          </button>
+          <button class="wcag-level-btn" data-level="AAA">
+            <span class="wcag-level-btn__badge">AAA</span>
+            <span class="wcag-level-btn__sub">Avancerad</span>
+          </button>
+        </div>
+
+        <div class="linter-input-wrap" style="margin-bottom:var(--tl-space-4)">
+          <textarea
+            class="linter-textarea"
+            id="a11yInput"
+            placeholder="Klistra in HTML att granska...
+
+Exempel:
+<html>
+  <body>
+    <img src='hero.jpg'>
+    <a href='/'>klicka här</a>
+    <form>
+      <input type='text'>
+      <button></button>
+    </form>
+    <div onclick='action()'>Klickbar div</div>
+  </body>
+</html>"
+            spellcheck="false"
+            aria-label="HTML att granska för tillgänglighet"
+          ></textarea>
+        </div>
+
+        <div class="linter-actions">
+          <button class="btn btn--primary" id="btnRunA11y">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Analysera tillgänglighet
+          </button>
+          <button class="btn btn--secondary" id="btnA11ySample">
+            Ladda exempelkod
+          </button>
+          <button class="btn btn--ghost" id="btnA11yClear">Rensa</button>
+        </div>
+
+        <div id="a11yResults" style="display:none">
+          <div class="a11y-score-card" id="a11yScoreCard"></div>
+          <div class="a11y-checks-grid" id="a11yChecksGrid"></div>
+        </div>
+
+      </section>
+
+      <!-- ==========================================================
+           SECTION: PRINCIPLES
+      ========================================================== -->
+      <section id="principles" class="section" aria-label="Designprinciper">
+
+        <div class="section__header">
+          <div class="section__header-text">
+            <h1 class="section__title">Designprinciper</h1>
+            <p class="section__description">Kvalitativa riktlinjer och principer för T-Light. Dessa principer gäller oavsett ramverk och valideras även automatiskt.</p>
+          </div>
+          <div class="section__actions">
+            <input type="search" class="form-input" id="principlesSearch" placeholder="Sök principer..." style="width:240px" aria-label="Sök designprinciper">
+          </div>
+        </div>
+
+        <div class="principles-grid" id="principlesGrid"></div>
+
+      </section>
+
+      <!-- ==========================================================
+           SECTION: SCRAMBLE
+      ========================================================== -->
+      <section id="scramble" class="section" aria-label="Scramble Tool">
+
+        <div class="section__header">
+          <div class="section__header-text">
+            <h1 class="section__title">Scramble Tool</h1>
+            <p class="section__description">Maskera känslig data innan kod skickas till AI-tjänster. DOM-strukturen bevaras men affärskritisk information döljs.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom:var(--tl-space-5)">
+          <h3 style="font-size:var(--tl-text-sm);font-weight:var(--tl-font-semibold);margin-bottom:var(--tl-space-3);color:var(--tl-text-primary)">Vad maskeras</h3>
+          <div class="scramble-options" id="scrambleOptions">
+            <label class="scramble-option">
+              <input type="checkbox" id="scrambleDomains" checked> Domänadresser &amp; URL:er
+            </label>
+            <label class="scramble-option">
+              <input type="checkbox" id="scrambleText" checked> Innehållstext (löpande text)
+            </label>
+            <label class="scramble-option">
+              <input type="checkbox" id="scrambleEmails" checked> E-postadresser
+            </label>
+            <label class="scramble-option">
+              <input type="checkbox" id="scrambleIds" checked> ID- och klassnamn (egna)
+            </label>
+            <label class="scramble-option">
+              <input type="checkbox" id="scrambleImages"> Bildfilnamn
+            </label>
+          </div>
+        </div>
+
+        <div class="scramble-layout">
+          <div class="scramble-panel">
+            <div class="scramble-panel__label">
+              <span class="badge badge--original">Original</span>
+              Din kod
+            </div>
+            <textarea
+              class="scramble-textarea"
+              id="scrambleInput"
+              placeholder="Klistra in koden du vill maskera..."
+              spellcheck="false"
+              aria-label="Originalkod att maskera"
+            ></textarea>
+          </div>
+          <div class="scramble-panel">
+            <div class="scramble-panel__label">
+              <span class="badge badge--scrambled">Maskerad</span>
+              Säker för AI-analys
+            </div>
+            <textarea
+              class="scramble-textarea"
+              id="scrambleOutput"
+              readonly
+              placeholder="Maskerad kod visas här..."
+              aria-label="Maskerad kod"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="scramble-actions">
+          <button class="btn btn--primary" id="btnScramble">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+            Maskera kod
+          </button>
+          <button class="btn btn--secondary" id="btnCopyScrambled" disabled>
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg>
+            Kopiera maskerad
+          </button>
+          <button class="btn btn--ghost" id="btnScrambleSample">Ladda exempel</button>
+          <button class="btn btn--ghost" id="btnScrambleClear">Rensa</button>
+        </div>
+
+        <div class="scramble-stats" id="scrambleStats"></div>
+
+      </section>
+
+      <!-- ==========================================================
+           SECTION: BRANDING
+      ========================================================== -->
+      <section id="branding" class="section" aria-label="Branding Portal">
+
+        <div class="section__header">
+          <div class="section__header-text">
+            <h1 class="section__title">Branding Portal</h1>
+            <p class="section__description">Hämta och verifiera godkända brand assets. Säkerställ att din applikation använder rätt logotyper, färger och budskap.</p>
+          </div>
+          <div class="section__actions">
+            <button class="btn btn--primary" id="btnVerifyBranding">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Verifiera mot Branding Portal
+            </button>
+          </div>
+        </div>
+
+        <div class="branding-verify-bar">
+          <div class="branding-verify-bar__text">
+            <strong>Senast synkroniserat:</strong> Idag 08:42 · Alla assets är uppdaterade och godkända
+          </div>
+          <span class="badge badge--safe">
+            <svg viewBox="0 0 20 20" fill="currentColor" style="width:12px;height:12px;margin-right:3px" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Synkroniserad
+          </span>
+        </div>
+
+        <div id="brandingRoot"></div>
+
+      </section>
+
+    </div><!-- end portal__content -->
+
+  </main>
+
+</div><!-- end portal -->
+
+<!-- Color Popover -->
+<div class="color-popover hidden" id="colorPopover" role="tooltip" aria-live="polite">
+  <div class="color-popover__swatch" id="popoverSwatch"></div>
+  <div class="color-popover__row">
+    <span class="color-popover__key">Variabel</span>
+    <span class="color-popover__val" id="popoverVarName"></span>
+  </div>
+  <div class="color-popover__row">
+    <span class="color-popover__key">Hex</span>
+    <span class="color-popover__val" id="popoverHex"></span>
+  </div>
+  <div class="color-popover__row">
+    <span class="color-popover__key">RGB</span>
+    <span class="color-popover__val" id="popoverRgb"></span>
+  </div>
+  <hr class="color-popover__divider">
+  <div class="color-popover__copy-row">
+    <button class="color-popover__copy-btn" id="popoverCopyVar" aria-label="Kopiera variabelnamn">
+      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg>
+      Kopiera variabel
+    </button>
+    <button class="color-popover__copy-btn" id="popoverCopyHex" aria-label="Kopiera hex-värde">
+      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg>
+      Kopiera hex
+    </button>
+  </div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>
