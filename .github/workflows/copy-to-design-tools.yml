@@ -2,11 +2,6 @@ name: Copy Design Tools Portal to design-tools repo
 
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Target branch in design-tools repo'
-        required: false
-        default: 'main'
 
 jobs:
   copy:
@@ -18,27 +13,30 @@ jobs:
         with:
           ref: claude/design-system-tools-portal-CV61S
 
-      - name: Checkout target (design-tools repo)
-        uses: actions/checkout@v4
-        with:
-          repository: otrobonita-studios/design-tools
-          token: ${{ secrets.PAT_TOKEN }}
-          path: design-tools-repo
-          ref: ${{ github.event.inputs.branch }}
-
-      - name: Copy portal files to root of design-tools
+      - name: Push portal files to design-tools
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          cp design-system-tools/index.html        design-tools-repo/index.html
-          cp design-system-tools/t-light-tokens.css design-tools-repo/t-light-tokens.css
-          cp design-system-tools/portal.css         design-tools-repo/portal.css
-          cp design-system-tools/app.js             design-tools-repo/app.js
+          git clone https://x-access-token:${PAT_TOKEN}@github.com/otrobonita-studios/design-tools.git design-tools-repo
 
-      - name: Commit and push
-        working-directory: design-tools-repo
-        run: |
+          cd design-tools-repo
+
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Create main branch if repo is empty
+          if [ -z "$(git branch -a)" ]; then
+            git checkout -b main
+          else
+            git checkout main 2>/dev/null || git checkout -b main
+          fi
+
+          cp ../design-system-tools/index.html         index.html
+          cp ../design-system-tools/t-light-tokens.css t-light-tokens.css
+          cp ../design-system-tools/portal.css         portal.css
+          cp ../design-system-tools/app.js             app.js
+
           git add .
           git diff --cached --quiet && echo "Nothing to commit" && exit 0
           git commit -m "Add T-Light Design System Tools portal"
-          git push origin ${{ github.event.inputs.branch }}
+          git push origin main
