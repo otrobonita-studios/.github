@@ -18,7 +18,7 @@ The portfolio spans retrieval and research infrastructure, agent-assisted engine
   A Rust command-line interface for the Mark Twain vector database API.
 
 - **[ragofrags-mcp](https://github.com/otrobonita-studios/ragofrags-mcp)**
-  The public MCP interface and technical brief for Rag Of Rags; the maintained specialist corpus remains private.
+  The public CLI interface and technical brief for Rag Of Rags; the maintained specialist corpus remains private.
 
 ### Safer agent-assisted engineering
 
@@ -45,17 +45,16 @@ Most application repositories are private while they are being developed, tested
 
 ### Retrieval, research, and agent infrastructure
 
-- `ragofrags` — a maintained specialist corpus about retrieval-augmented generation.
+- `ragofrags` — a maintained specialist corpus about retrieval-augmented generation.  [ragofrags.otrobonita.com](https://ragofrags.otrobonita.com).
 - `space-talks` — restored Apollo mission material rebuilt as machine-readable datasets and AI tooling; explore it at [spacetalks.otrobonita.com](https://spacetalks.otrobonita.com).
-- `rag-mesh-router` — policy, discovery, and routing across bounded specialist knowledge systems.
-- `agentic-reports` and `daily-agentic-briefs` — agent-assisted reporting and research workflows.
+- `rag-mesh-router` — policy, discovery, and routing across bounded specialist knowledge systems.  [router.otrobonita.com](https://router.otrobonita.com).
 
 ### Engineering and design governance
 
-- `engineering-playbook` — practical engineering guidance for AI-assisted delivery.
+- `engineering-playbook` — practical engineering guidance for AI-assisted delivery. [playbook.otrobonita.com](https://playbook.otrobonita.com).
 - `design-governance-orchestrator`, `design-system`, and `design-tools` — principles, tokens, components, and machine-readable rules for downstream applications and agents.
-- `blueprint-validator` — a proof of concept for validating structures, assets, and deliverables against defined design rules.
-- `enterprise-ui`, `enterprise-ux`, and `data-grids` — interface research for complex enterprise systems.
+- `blueprint-validator` — a proof of concept for validating structures, assets, and deliverables against defined design rules.  [blueprint.otrobonita.com](https://blueprint.otrobonita.com).
+- `enterprise-ui`, `enterprise-ux`, and `data-grids` — interface research for complex enterprise systems. 
 
 ### Business and operational intelligence
 
@@ -63,14 +62,15 @@ Most application repositories are private while they are being developed, tested
 - `undisturbed` — exposes the hidden revenue, impact, and innovation lost to administrative drag.
 - `claim` — restores innovators' requirements to their original intent before organisational compromise erases them.
 - `factory-survival-kit` — AI-assisted scenario planning for industrial resilience.
-- `stellar` and `stellar-logistics` — reporting and operational tooling.
+- `stellar-logistics` — reporting and operational tooling.  [logistics.otrobonita.com](https://logistics.otrobonita.com).
 
 ### Creative production, learning, and experiences
 
 - `the-production-unit`, `release-desk`, and `faceless-channel` — creative production, release preparation, distribution, and publishing workflows.
 - `skills-drills` — interactive quizzes, flashcards, and modular learning tools.
-- `superday` — AI-assisted day planning and destination experiences.
-- `the-shop` — an experimental commerce platform for understanding agentic commerce.
+- `superday` — AI-assisted day planning and destination experiences.  [superday.otrobonita.com](https://superday.otrobonita.com).
+- `the-shop` — an experimental commerce platform for understanding agentic commerce.  [stockfootage.otrobonita.com](https://stockfootage.otrobonita.com).
+
 
 ## Design philosophy
 
