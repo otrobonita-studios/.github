@@ -46,7 +46,6 @@ Most application repositories are private while they are being developed, tested
 
 ### Engineering and design governance
 
-- `engineering-playbook` — private working copy of engineering guidance. The public installable kit is [`playbook`](https://github.com/otrobonita-studios/playbook) at [playbook.otrobonita.com](https://playbook.otrobonita.com).
 - `design-governance-orchestrator`, `design-system`, and `design-tools` — principles, tokens, components, and machine-readable rules for downstream applications and agents.
 - `blueprint-validator` — a proof of concept for validating structures, assets, and deliverables against defined design rules.  [blueprint.otrobonita.com](https://blueprint.otrobonita.com).
 - `enterprise-ui`, `enterprise-ux`, and `data-grids` — interface research for complex enterprise systems. 
