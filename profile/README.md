@@ -4,6 +4,10 @@ We build focused AI systems that turn complex knowledge, workflows, and decision
 
 The portfolio spans retrieval and research infrastructure, agent-assisted engineering, operational intelligence, design governance, creative production, and public experiments. The common thread is practical value: bounded systems, inspectable sources, clear human accountability, and interfaces people can actually use.
 
+**Judge these first:** [playbook](https://github.com/otrobonita-studios/playbook), [whitepapers](https://github.com/otrobonita-studios/whitepapers), [mark-twain](https://github.com/otrobonita-studios/mark-twain), [mark-twain-cli](https://github.com/otrobonita-studios/mark-twain-cli).
+
+Agents opening this org: [llms.txt](https://github.com/otrobonita-studios/.github/blob/main/llms.txt). Public repo bar: [REPO-STANDARD.md](https://github.com/otrobonita-studios/.github/blob/main/REPO-STANDARD.md).
+
 ## Open work
 
 ### Research and knowledge systems
@@ -18,12 +22,12 @@ The portfolio spans retrieval and research infrastructure, agent-assisted engine
   A Rust command-line interface for the Mark Twain vector database API.
 
 - **[marks-awareness](https://github.com/otrobonita-studios/marks-awareness)**
-  An addtion to the Mark Twain RAG, where he gets new life in the shape of Mark II. Continous learning.
+  An addition to the Mark Twain RAG: continuous learning for Mark II. Experiment; not the primary Twain product.
 
 ### Safer agent-assisted engineering
 
 - **[playbook](https://github.com/otrobonita-studios/playbook)**
-  An installable foundation for safer AI-assisted engineering: governance, agent instructions, specifications, evaluations, guardrails, isolation, and project bootstrap.
+  An installable foundation for safer AI-assisted engineering: governance, agent instructions, specifications, evaluations, guardrails, isolation, and project bootstrap. Live at [playbook.otrobonita.com](https://playbook.otrobonita.com).
 
 ### Creative tools and shared assets
 
@@ -32,7 +36,7 @@ The portfolio spans retrieval and research infrastructure, agent-assisted engine
 
 ## Applied systems in development
 
-Most application repositories are private while they are being developed, tested, or used as internal working systems. Current areas include:
+Most application repositories are private while they are being developed, tested, or used as internal working systems. List current as of 3 September 2026.
 
 ### Retrieval, research, and agent infrastructure
 
@@ -42,7 +46,7 @@ Most application repositories are private while they are being developed, tested
 
 ### Engineering and design governance
 
-- `engineering-playbook` — practical engineering guidance for AI-assisted delivery. [playbook.otrobonita.com](https://playbook.otrobonita.com).
+- `engineering-playbook` — private working copy of engineering guidance. The public installable kit is [`playbook`](https://github.com/otrobonita-studios/playbook) at [playbook.otrobonita.com](https://playbook.otrobonita.com).
 - `design-governance-orchestrator`, `design-system`, and `design-tools` — principles, tokens, components, and machine-readable rules for downstream applications and agents.
 - `blueprint-validator` — a proof of concept for validating structures, assets, and deliverables against defined design rules.  [blueprint.otrobonita.com](https://blueprint.otrobonita.com).
 - `enterprise-ui`, `enterprise-ux`, and `data-grids` — interface research for complex enterprise systems. 
