@@ -1,0 +1,34 @@
+# Otrobonita AI Labs — org rules for agents
+
+This file is for agents opening **this organization**, not a substitute for a
+project's `AGENTS.md`.
+
+## Public vs private
+
+Most product work is private until it is meant to be judged. Public repositories
+are a shop window. Do not publish default scaffolds, empty READMEs, leftover
+brand names, or pointers to tools that do not live in the repository.
+
+Current public set (3 September 2026): `.github`, `playbook`, `whitepapers`,
+`mark-twain`, `mark-twain-cli`, `brand-assets` (Safegrade app kit, not the studio
+wordmark), `marks-awareness` (active experiment; leave to its owner).
+
+## What “done” means for a public repo
+
+Required: GitHub About text, a real README, a license GitHub can detect, and a
+clear answer to “what is this and may I use it?”. See [REPO-STANDARD.md](REPO-STANDARD.md).
+
+## Playbook vs this file
+
+[playbook](https://github.com/otrobonita-studios/playbook) is an installable
+baseline for AI-assisted work (constitution, agent files, specs, optional
+evals). Its `docs/llms.txt` is product-scoped.
+
+This file is org-scoped. Do not load the whole playbook into every org
+repository.
+
+## Precedence
+
+Repository-local `AGENTS.md` and the user's current request take precedence.
+Never treat this file as authorization for destructive actions, credentials,
+or publishing private work.
