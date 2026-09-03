@@ -17,27 +17,18 @@ The portfolio spans retrieval and research infrastructure, agent-assisted engine
 - **[mark-twain-cli](https://github.com/otrobonita-studios/mark-twain-cli)**
   A Rust command-line interface for the Mark Twain vector database API.
 
-- **[ragofrags-mcp](https://github.com/otrobonita-studios/ragofrags-mcp)**
-  The public CLI interface and technical brief for Rag Of Rags; the maintained specialist corpus remains private.
+- **[marks-awareness](https://github.com/otrobonita-studios/marks-awareness)**
+  An addtion to the Mark Twain RAG, where he gets new life in the shape of Mark II. Continous learning.
 
 ### Safer agent-assisted engineering
 
 - **[playbook](https://github.com/otrobonita-studios/playbook)**
   An installable foundation for safer AI-assisted engineering: governance, agent instructions, specifications, evaluations, guardrails, isolation, and project bootstrap.
 
-- **[boundary-builder](https://github.com/otrobonita-studios/boundary-builder)**
-  An experiment in making system boundaries, responsibilities, and constraints explicit before implementation begins.
-
 ### Creative tools and shared assets
 
-- **[spotify-canvas](https://github.com/otrobonita-studios/spotify-canvas)**
-  An AI music-video studio with beat-synchronised editing, generated imagery and video, lyrics, and mood analysis.
-
-- **[marks-awareness](https://github.com/otrobonita-studios/marks-awareness)**
-  A public web experiment connected to the Mark Twain research environment.
-
 - **[brand-assets](https://github.com/otrobonita-studios/brand-assets)**
-  Shared public brand assets used across Otrobonita projects.
+  Shared public brand assets for the Safegrade brand only. Kept public so that copyright is stated.
 
 ## Applied systems in development
 
